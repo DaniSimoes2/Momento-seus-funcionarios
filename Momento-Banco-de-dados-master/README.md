@@ -4,21 +4,13 @@
 
 <b>QUERY EM SQL</b><br>
 
-<code>INSERT INTO funcionarios (primeiro_nome, sobrenome, email, telefone, dataContratacao, ocupacao_id, salario, departamento_id)
-VALUES ('Diego', 'Santos', 'santos.diego@momento.org', '365 598 545 478', '2022-06-07', 
-(SELECT ocupacao_id FROM ocupacoes WHERE ocupacao_title LIKE '%Desenvolvedor Web%'), 2500.00, (SELECT departamento_id FROM departamento WHERE departamento_name LIKE '%Tecnologia%'));</code><br>
+<code>INSERT INTO funcionarios (primeiro_nome, sobrenome, email, telefone, dataContratacao, ocupacao_id, salario, departamento_id) VALUES ('Daniele', 'Simoes, 'simoes.daniele@momento.org', '365 598 545 478', '2022-06-07', (SELECT ocupacao_id FROM ocupacoes WHERE ocupacao_title LIKE '%Desenvolvedor Web%'), 2500.00, (SELECT departamento_id FROM departamento WHERE departamento_name LIKE '%Tecnologia%'));</code><br>
 
 <h2>2-A administração está sem funcionários. Inclua os outros elementos do seu grupo do demoday no departamento de administração.</h2>
 
 <b>QUERY EM SQL</b>:<br>
 
-<code>INSERT INTO funcionarios(primeiro_nome, sobrenome, email, telefone, dataContratacao, ocupacao_id, salario, departamento_id)
-VALUES 
-    ('Camily', 'Vitoria', 'Cami.vit@momento.org', '11 304343434', '2012-06-12', (SELECT ocupacao_id FROM ocupacoes WHERE ocupacao_title LIKE '%Vice-presidente de administração%'), 
-15200.00, (SELECT departamento_id FROM departamento WHERE departamento_name LIKE '%Admnistração%')),('Giullia', 'Maria', 'Maria.Giullia@momento.org', '11 305563434', '2021-05-12', (SELECT ocupacao_id FROM ocupacoes WHERE ocupacao_title LIKE '%Assistente Administrativo%'), 
-1200.00, (SELECT departamento_id FROM departamento WHERE departamento_name LIKE '%Admnistração%')),
-('Pedro', 'Oliveira', 'Oliveira@momento.org', '11 98963434', '1998-09-20', (SELECT ocupacao_id FROM ocupacoes WHERE ocupacao_title LIKE '%Assistente Administrativo%'), 
-1200.00, (SELECT departamento_id FROM departamento WHERE departamento_name LIKE '%Admnistração%'));</code><br>
+<code>INSERT INTO funcionarios(primeiro_nome, sobrenome, email, telefone, dataContratacao, ocupacao_id, salario, departamento_id) VALUES ('Leonardo', 'Vieira', 'Leo.Vie@momento.org', '11 304343434', '2012-06-12', (SELECT ocupacao_id FROM ocupacoes WHERE ocupacao_title LIKE '%Vice-presidente de administração%'), 15200.00, (SELECT departamento_id FROM departamento WHERE departamento_name LIKE '%Admnistração%')),('Ellen', 'Teixeira, 'Teixeira.Ellen@momento.org', '11 305563434', '2021-05-12', (SELECT ocupacao_id FROM ocupacoes WHERE ocupacao_title LIKE '%Assistente Administrativo%'), 1200.00, (SELECT departamento_id FROM departamento WHERE departamento_name LIKE '%Admnistração%')), ('Gustavo', 'Amorim', 'Amorim@momento.org', '11 98963434', '1998-09-20', (SELECT ocupacao_id FROM ocupacoes WHERE ocupacao_title LIKE '%Assistente Administrativo%'), 1200.00, (SELECT departamento_id FROM departamento WHERE departamento_name LIKE '%Admnistração%'));</code><br>
 
 <h2>3-Agora diga, quantos funcionários temos ao total na empresa?</h2>
 
@@ -155,15 +147,16 @@ AND dependentes.sobrenome LIKE '%Manuel%';</code><br>
 
 <h2>16 - Escolha um país para se mudar. Qual seria esse país? Por que escolheria esse país? E o departamento. O que seria? Como seriam seus funcionários?</h2>
 
-<b>Resposta: </b>Para a Argentina, eu gosto de churrasco e falam que o churrasco la é bom. Departamento de comidas, meus funcionarios iriam gostar de comida
+<b>Resposta: </b>Para o Canadá, eles são muitos receptivos com a comunidade lgbtqia+. Departamento lgbts, meus funcionarios fariam parte da comunidade 
 
 <h2>17 - Atualize as informações na tabela para que seu departamento seja criado.</h2>
 
 <b>QUERY EM SQL</b>:<br>
 
-<code>INSERT INTO posicao (endereco, cidade, pais_id) VALUES ( 'Brandsen 805', 'Buenos Aires', 'AR';</code><br>
+<code>INSERT INTO posicao (endereco, cidade, pais_id) VALUES ( 'Brandsen 805', 'Canada', 'AR';</code><br>
 
-<code>INSERT INTO departamento (departamento_name, posicao_id) VALUES ('Comedores de churrasco', (SELECT posicao_id FROM posicao WHERE endereco LIKE '%Brandsen 805%'));</code><br>
+<code>INSERT INTO departamento (departamento_name, posicao_id) VALUES ('Comunidade lgbts, (SELECT posicao_id FROM posicao WHERE endereco LIKE '%Brandsen 805%'));
+</code><br>
 
 
 
